@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="shortcut icon" href="../static/images/BocetoSami.jpg" type="image/x-icon">
+    <title>ADMIN</title>
+</head>
+<body class="test-body">
+    <header class="header" id="inicio">
+        <h2 class="text0">ADMINISTRADOR<img src="../static/images/flecha-hacia-abajo.png"></h2>
+        <img src="../static/iconos/bx-menu-alt-right.svg" class="hamburger">
+        <nav class="menu-navegacion">
+            <a href="/">Regresar</a>
+        </nav>
+    </header>
+    <main>
+        <section class="contenedor1" id="login">
+            <div class="admin-container" id="admin">
+                <img class="admin-img" src="../static/images/BocetoSami.jpg" alt="">
+                <form action="/admin" method="POST">
+                    <h2 class="form_title">INICIO DE SESIÓN ADMINISTRADOR</h2>
+                    <!--Usuario-->
+                    <label for="Usuario" class="form_label">Usuario:</label>
+                    <input type="text" name="Usuario" class="form_input" required="required" placeholder="Escriba su usuario"><br>
+                    <!--Clave-->
+                    <label for="Clave" class="form_label">Contraseña:</label>
+                    <input type="password" name="Clave" required="required" class="form_input" placeholder="Escriba su contraseña"><br>
+                    <input class="error" readonly type="text" id="mensaje" name="mensaje">
+                    <button id="submit">Ingresar</button>
+                </form>
+            </div>
+        </section>
+        <section></section>
+    </main>
+    <footer id="contactos">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="subtitulo1">CONTACTO</h2>
+                <div class="social-media">
+                    <h2 class="brand">Saray Mejia Medina</h2>
+                    <a title="Visitar GitHub de Saray" href="https://github.com/smejiame03" class="social-media-icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a title="Visitar Linkedin de Saray" href="https://www.linkedin.com/in/saray-mejia-medina-2345ba140/" target="_blank" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="social-media">
+                    <h2 class="brand">Maria Isabel Bohorquez Mejia</h2>
+                    <a title="Visitar GitHub de Maria" href="https://github.com/mariamejia2703" class="social-media-icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a title="Visitar Linkedin de Maria" href="https://www.linkedin.com/in/maria-isabel-bohorquez-mejia-322513271/" target="_blank" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="social-media">
+                    <h2 class="brand">Luisa María Ramirez Montero</h2>
+                    <a title="Visitar GitHub de Luisa" href="https://github.com/zayn31" class="social-media-icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a title="Visitar Linkedin de Luisa" href="https://www.linkedin.com/in/luisa-maria-ramirez/" target="_blank" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p class="p">Estudiantes Ingeniería de sistemas</p>
+                <p>Universidad Católica Luis Amigó</p>
+                <p>Medellin</p>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+    <script src="../static/js/menu.js"></script>
+    <script>
+        // Obtener el valor del parámetro mensaje de la URL
+        var mensaje = new URLSearchParams(window.location.search).get('mensaje');
+        
+        // Establecer el valor del mensaje en el input
+        document.getElementById('mensaje').value = mensaje;
+        if(document.getElementById('mensaje').value == "Error de autenticación"){
+            document.getElementById('mensaje').classList.add("errorV");
+        }
+    </script>
+</body>
+</html>

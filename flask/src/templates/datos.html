@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="shortcut icon" href="../static/images/BocetoSami.jpg" type="image/x-icon">
+    <title>ADMIN</title>
+</head>
+<body>
+    <header class="header" id="inicio">
+        <h2 class="text0">ESTADÍSTICAS<img src="../static/images/flecha-hacia-abajo.png"></h2>
+        <img src="../static/iconos/bx-menu-alt-right.svg" class="hamburger">
+        <nav class="menu-navegacion">
+            <a href="#estadisticas">Generar estadísticas</a>
+            <a href="#contactos">Sobre nosotros</a>
+            <a href="administrador.html">Cerrar sesión</a>
+        </nav>
+    </header>
+    <main>
+        <section class="contenedor" id="estadisticas">
+            <h2 class="subtitulo">DATOS ESTADÍSTICOS</h2>
+            <div class="contenedor-servicio"> 
+                <div class="datos-container">
+                    <h2 class="form_title">GRÁFICA</h2>
+                    <form id="form" action="">
+                        <!--Programa Académico-->
+                        <label for="ProgramaAcademico" class="form_label">Programa Académico:</label>
+                        <select name="ProgramaAcademico" id="ProgramaAcademico" class="select" required>
+                            <option value="#">Seleccione una opción</option>
+                            <option value="Administración de Empresas">Administración de Empresas</option>
+                            <option value="Comunicación Social">Comunicación Social</option>
+                            <option value="Contaduría Pública">Contaduría Pública</option>
+                            <option value="Derecho">Derecho</option>
+                            <option value="Desarrollo Familiar">Desarrollo Familiar</option>
+                            <option value="Diseño Gráfico">Diseño Gráfico</option>
+                            <option value="Filosofía">Filosofía</option>
+                            <option value="Gastronomía">Gastronomía</option>
+                            <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                            <option value="Licenciatura en Educación Infantil">Licenciatura en Educación Infantil</option>
+                            <option value="Licenciatura en Lenguas Extranjeras">Licenciatura en Lenguas Extranjeras</option>
+                            <option value="Negocios Internacionales">Negocios Internacionales</option>
+                            <option value="Psicología">Psicología</option>
+                            <option value="Publicidad">Publicidad</option>
+                            <option value="Teología">Teología</option>
+                        </select>
+                        <!--Semestre-->
+                        <label for="Semestre" class="form_label">Semestre:</label>
+                        <select name="Semestre" id="Semestre" class="select" required>
+                            <option value="#">Seleccione una opción</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <input class="error1" readonly type="text" id="mensaje" name="mensaje">
+                        <button type="submit" id="GenerarGrafica">Generar</button>
+                    </form>
+                </div>
+                <div class="datos-container">
+                    <form id="form1" action="">
+                        <h2 class="form_title">GRÁFICA</h2>
+                        <!--Programa Académico-->
+                        <label for="ProgramaAcademico1" class="form_label">Programa Académico:</label>
+                        <select name="ProgramaAcademico1" id="ProgramaAcademico1" class="select" required>
+                            <option value="#">Seleccione una opción</option>
+                            <option value="Administración de Empresas">Administración de Empresas</option>
+                            <option value="Comunicación Social">Comunicación Social</option>
+                            <option value="Contaduría Pública">Contaduría Pública</option>
+                            <option value="Derecho">Derecho</option>
+                            <option value="Desarrollo Familiar">Desarrollo Familiar</option>
+                            <option value="Diseño Gráfico">Diseño Gráfico</option>
+                            <option value="Filosofía">Filosofía</option>
+                            <option value="Gastronomía">Gastronomía</option>
+                            <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                            <option value="Licenciatura en Educación Infantil">Licenciatura en Educación Infantil</option>
+                            <option value="Licenciatura en Lenguas Extranjeras">Licenciatura en Lenguas Extranjeras</option>
+                            <option value="Negocios Internacionales">Negocios Internacionales</option>
+                            <option value="Psicología">Psicología</option>
+                            <option value="Publicidad">Publicidad</option>
+                            <option value="Teología">Teología</option>
+                        </select>
+                        <!--Edad-->
+                        <label for="Edad" class="form_label">Edad:</label>
+                        <input type="number" name="Edad" id="Edad" required="required" class="form_input" placeholder="Escriba una edad" minlength="3"><br>
+                        <input class="error1" readonly type="text" id="mensaje1" name="mensaje1">
+                        <button type="submit" id="GenerarGrafica1">Generar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="contanedor-graficasImg">
+                <div class="contenedor-graficas" id="contenedor-graficas">
+                    <h2 class="titulo_grafica" id="titulo_grafica">DATOS</h2>
+                    <img class="imgGrafica" id="img" src="">
+                    <button class="btn_grafica" id="btn_grafica" onclick="ocultarimg_grafica()">Cerrar</button>
+                </div>
+                <div class="contenedor-graficas" id="contenedor-graficas1">
+                    <h2 class="titulo_grafica1" id="titulo_grafica1">DATOS</h2>
+                    <img class="imgGrafica1" id="img1" src="">
+                    <button class="btn_grafica1" id="btn_grafica1" onclick="ocultarimg_grafica1()">Cerrar</button>
+                </div>
+            </div>
+        </section>
+        <section></section>
+    </main>
+    <footer id="contactos">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="subtitulo1">CONTACTO</h2>
+                <div class="social-media">
+                    <h2 class="brand">Saray Mejia Medina</h2>
+                    <a title="Visitar GitHub de Saray" href="https://github.com/smejiame03" class="social-media-icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a title="Visitar Linkedin de Saray" href="https://www.linkedin.com/in/saray-mejia-medina-2345ba140/" target="_blank" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="social-media">
+                    <h2 class="brand">Maria Isabel Bohorquez Mejia</h2>
+                    <a title="Visitar GitHub de Maria" href="https://github.com/mariamejia2703" class="social-media-icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a title="Visitar Linkedin de Maria" href="https://www.linkedin.com/in/maria-isabel-bohorquez-mejia-322513271/" target="_blank" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="social-media">
+                    <h2 class="brand">Luisa María Ramirez Montero</h2>
+                    <a title="Visitar GitHub de Luisa" href="https://github.com/zayn31" class="social-media-icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a title="Visitar Linkedin de Luisa" href="https://www.linkedin.com/in/luisa-maria-ramirez/" target="_blank" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p class="p">Estudiantes Ingeniería de sistemas</p>
+                <p>Universidad Católica Luis Amigó</p>
+                <p>Medellin</p>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+    <script src="../static/js/menu.js"></script>
+    <!-- Función para mostrar el gráfico estadístico -->
+    <script>
+        const form = document.getElementById('form')
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+            const ProgramaAcademico = document.getElementById('ProgramaAcademico').value
+            const Semestre = document.getElementById('Semestre').value
+            const img = document.getElementById('img')
+            const titulo_grafica = document.getElementById('titulo_grafica')
+            const btn_grafica = document.getElementById('btn_grafica')
+            const contenedor_graficas = document.getElementById('contenedor-graficas') 
+            
+            // Enviar una solicitud POST asincrónica al servidor para generar la imagen
+            fetch('/grafica', {
+                method: 'POST',
+                body: JSON.stringify({ProgramaAcademico: ProgramaAcademico,Semestre: Semestre}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.img){
+                    document.getElementById('mensaje').classList.remove("errorV");
+                    img.classList.add('imgGrafica-activo')
+                    img.src = 'data:image/png;base64,'+data.img
+                    titulo_grafica.classList.add("titulo_grafica-activo")
+                    btn_grafica.classList.add("btn_grafica-activo")
+                }
+                else if(data.error){
+                    console.log(data.error)
+                    // Establecer el valor del mensaje en el input
+                    document.getElementById('mensaje').value = data.error;
+                    if(document.getElementById('mensaje').value == "No hay datos suficientes"){
+                        document.getElementById('mensaje').classList.add("errorV");
+                        btn_grafica.classList.remove("btn_grafica-activo")
+                        titulo_grafica.classList.remove("titulo_grafica-activo")
+                        img.classList.remove('imgGrafica-activo')
+                    }
+                }
+            })
+        })
+
+        function ocultarimg_grafica(){
+            btn_grafica.classList.remove("btn_grafica-activo")
+            titulo_grafica.classList.remove("titulo_grafica-activo")
+            img.classList.remove('imgGrafica-activo')
+        }
+
+        const form1 = document.getElementById('form1')
+
+        form1.addEventListener('submit', (event) => {
+            event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+            const ProgramaAcademico1 = document.getElementById('ProgramaAcademico1').value
+            const Edad = document.getElementById('Edad').value
+            const img1 = document.getElementById('img1')
+            const titulo_grafica1 = document.getElementById('titulo_grafica1')
+            const btn_grafica1 = document.getElementById('btn_grafica1')
+            const contenedor_graficas1 = document.getElementById('contenedor-graficas1') 
+            
+            // Enviar una solicitud POST asincrónica al servidor para generar la imagen
+            fetch('/grafica1', {
+                method: 'POST',
+                body: JSON.stringify({ProgramaAcademico: ProgramaAcademico1, Edad: Edad}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.img){
+                    document.getElementById('mensaje1').classList.remove("errorV");
+                    img1.classList.add('imgGrafica1-activo')
+                    img1.src = 'data:image/png;base64,'+data.img
+                    titulo_grafica1.classList.add("titulo_grafica1-activo")
+                    btn_grafica1.classList.add("btn_grafica1-activo")
+                }
+                else if(data.error){
+                    // Establecer el valor del mensaje en el input
+                    document.getElementById('mensaje1').value = data.error;
+                    if(document.getElementById('mensaje1').value == "No hay datos suficientes"){
+                        document.getElementById('mensaje1').classList.add("errorV");
+                        btn_grafica1.classList.remove("btn_grafica1-activo")
+                        titulo_grafica1.classList.remove("titulo_grafica1-activo")
+                        img1.classList.remove('imgGrafica1-activo')
+                    }
+                }
+            })
+        })
+
+        function ocultarimg_grafica1(){
+            btn_grafica1.classList.remove("btn_grafica1-activo")
+            titulo_grafica1.classList.remove("titulo_grafica1-activo")
+            img1.classList.remove('imgGrafica1-activo')
+        }
+    </script>
+</body>
+</html>

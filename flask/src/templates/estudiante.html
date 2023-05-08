@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="shortcut icon" href="../static/images/BocetoSami.jpg" type="image/x-icon">
+    <title>Test</title>
+</head>
+<body class="test-body" onload="generarNumero()">
+    <header class="header" id="inicio">
+        <h2 class="text0">TEST<img src="../static/images/flecha-hacia-abajo.png"></h2>
+        <img src="../static/iconos/bx-menu-alt-right.svg" class="hamburger">
+        <nav class="menu-navegacion">
+            <a href="#registro">Registro</a>
+            <a href="#contactos">Sobre nosotros</a>
+            <a href="/">Regresar</a>
+        </nav>
+    </header>
+    <main>
+        <section class="contenedor1" id="registro">
+            <h2 class="copy">Bienvenido a <span class="sami">SAMI</span>, te realizaré algunas preguntas para que podamos determinar si tienes algún riesgo de padecer un trastorno emocional.</h2>
+            <h2 class="copy">Antes de iniciar, ingresa los siguientes datos:</h2>
+            <h2 class="copy1">Ten en cuenta que según nuestra <a title="Ver política de privacidad" href="../static/text/politica_privacidad.txt" target="_blank">política de privacidad</a>, los datos confidenciales no serán compartidos a terceros.</h2>
+            <div class="estudiante-container" id="info-estudiante">
+                <form action="/estudiante" method="POST">
+                    <h2 class="form_title">Información del estudiante</h2>
+                    <input type="hidden" name="campo-autoincrementable" id="campo-autoincrementable" value="">
+                    <!--IDEstudiante-->
+                    <label for="IDEstudiante" class="form_label">Cédula:</label>
+                    <input type="number" name="IDEstudiante" class="form_input" required="required" placeholder="Escriba su número de cédula" minlength="7"><br>
+                    <!--Primer Nombre-->
+                    <label for="PrimerNombre" class="form_label">Primer Nombre:</label>
+                    <input type="text" name="PrimerNombre" required="required" class="form_input" placeholder="Escriba su primer nombre" minlength="3"><br>
+                    <!--Segundo Nombre-->
+                    <label for="SegundoNombre" class="form_label">Segundo Nombre:</label>
+                    <input type="text" name="SegundoNombre" class="form_input" placeholder="Escriba su segundo nombre" minlength="3"><br>
+                    <!--Primer Apellido-->
+                    <label for="PrimerApellido" class="form_label">Primer Apellido:</label>
+                    <input type="text" name="PrimerApellido" required="required" class="form_input" placeholder="Escriba su primer apellido" minlength="3"><br>
+                    <!--Segundo Apellido-->
+                    <label for="SegundoApellido" class="form_label">Segundo Apellido:</label>
+                    <input type="text" name="SegundoApellido" required="required" class="form_input" placeholder="Escriba su segundo apellido" minlength="3"><br>
+                    <!--Edad-->
+                    <label for="Edad" class="form_label">Edad:</label>
+                    <input type="number" name="Edad" required="required" class="form_input" placeholder="Escriba su edad" minlength="3"><br>
+                    <!--Programa Académico-->
+                    <label for="ProgramaAcademico" class="form_label">Programa Académico:</label>
+                    <select name="ProgramaAcademico" class="select" required>
+                        <option value="#">Seleccione una opción</option>
+                        <option value="Administración de Empresas">Administración de Empresas</option>
+                        <option value="Comunicación Social">Comunicación Social</option>
+                        <option value="Contaduría Pública">Contaduría Pública</option>
+                        <option value="Derecho">Derecho</option>
+                        <option value="Desarrollo Familiar">Desarrollo Familiar</option>
+                        <option value="Diseño Gráfico">Diseño Gráfico</option>
+                        <option value="Filosofía">Filosofía</option>
+                        <option value="Gastronomía">Gastronomía</option>
+                        <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                        <option value="Licenciatura en Educación Infantil">Licenciatura en Educación Infantil</option>
+                        <option value="Licenciatura en Lenguas Extranjeras">Licenciatura en Lenguas Extranjeras</option>
+                        <option value="Negocios Internacionales">Negocios Internacionales</option>
+                        <option value="Psicología">Psicología</option>
+                        <option value="Publicidad">Publicidad</option>
+                        <option value="Teología">Teología</option>
+                    </select>
+                    <!--Semestre-->
+                    <label for="Semestre" class="form_label">Semestre:</label>
+                    <select name="Semestre" class="select" required>
+                        <option value="#">Seleccione una opción</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <button id="submit">Iniciar</button>
+                </form>
+            </div>
+        </section>
+        <section></section>
+    </main>
+    <footer id="contactos">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="subtitulo1">CONTACTO</h2>
+                <div class="social-media">
+                    <h2 class="brand">Saray Mejia Medina</h2>
+                    <a title="Visitar GitHub de Saray" href="https://github.com/smejiame03" class="social-media-icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a title="Visitar Linkedin de Saray" href="https://www.linkedin.com/in/saray-mejia-medina-2345ba140/" target="_blank" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="social-media">
+                    <h2 class="brand">Maria Isabel Bohorquez Mejia</h2>
+                    <a title="Visitar GitHub de Maria" href="https://github.com/mariamejia2703" class="social-media-icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a title="Visitar Linkedin de Maria" href="https://www.linkedin.com/in/maria-isabel-bohorquez-mejia-322513271/" target="_blank" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="social-media">
+                    <h2 class="brand">Luisa María Ramirez Montero</h2>
+                    <a title="Visitar GitHub de Luisa" href="https://github.com/zayn31" class="social-media-icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a title="Visitar Linkedin de Luisa" href="https://www.linkedin.com/in/luisa-maria-ramirez/" target="_blank" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p class="p">Estudiantes Ingeniería de sistemas</p>
+                <p>Universidad Católica Luis Amigó</p>
+                <p>Medellin</p>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+    <script src="../static/js/menu.js"></script>
+</body>
+<script>
+    // Función para generar un número secuencial
+    function generarNumero() {
+      let numeroActual = parseInt(localStorage.getItem('numeroActual')) || 0;
+      let nuevoNumero = numeroActual + 1;
+      localStorage.setItem('numeroActual', nuevoNumero);
+      document.getElementById('campo-autoincrementable').value = nuevoNumero;
+    }
+</script>
+</html>
